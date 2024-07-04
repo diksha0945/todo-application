@@ -1,0 +1,15 @@
+<div class="center">
+  <h1> Todo-List Application</h1>
+   <input type="text"[(ngModel)]="todoitem" placeholder="Enter New Task"/>
+  <button type="btn-btn-danger" class="bbb" (click)="addTodo()">Add Task</button> 
+</div>
+  <div class="center">
+      <ul>
+          <li *ngFor="let item of todolist;  let i=index"> 
+            {{item}} 
+              <button (click)="removeTodo(i)">Remove</button> 
+            </li>
+      </ul>
+      {{todolist|json}}
+  </div>
+  
